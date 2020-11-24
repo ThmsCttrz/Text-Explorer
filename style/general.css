@@ -1,0 +1,96 @@
+/*FONT IMPORT*/
+
+@font-face {
+    font-family: "Metropolis Regular";
+    src: url("../media/fonts/Metropolis-Regular.woff");
+}
+@font-face {
+    font-family: "Metropolis Medium";
+    src: url("../media/fonts/Metropolis-Medium.woff");
+}
+@font-face {
+    font-family: "Metropolis Semi Bold";
+    src: url("../media/fonts/Metropolis-SemiBold.woff");
+}
+@font-face {
+    font-family: "Metropolis Light";
+    src: url("../media/fonts/Metropolis-Light.woff");
+}
+
+
+/*PAGE STRUCTURE*/
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: inherit;
+    height: inherit;
+    margin: 0;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Metropolis Regular", sans-serif;
+}
+
+header {
+    height: 10vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 70vw;
+    height: 80vh;
+    border: 1px solid black;
+}
+
+footer {
+    height: 5vh;
+}
+
+
+/*PAGE ELEMENTS*/
+
+#toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: inherit;
+    height: 50px;
+    background-color: dimgrey;
+}
+
+#toolbar > span {
+    margin: 7px;
+}
+
+#editor {
+    min-width: calc(70vw - 14px);
+    max-width: calc(70vw - 14px);
+    width: calc(70vw - 14px);
+    padding: 15px 7px;
+    border-width: 0;
+    min-height: calc(80vh - 40px - 30px - 30px);
+    max-height: calc(80vh - 40px - 30px - 30px);
+    height: calc(80vh - 40px - 30px);
+    background-color: white;
+    overflow-y: auto;
+}
+
+#contextbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: inherit;
+    height: 30px;
+    background-color: dimgrey;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Explorer</title>
+    <link rel="stylesheet" href="style/general.css">
+</head>
+<body>
+    <header>
+        <img src="" style="display: none">  <!--WEBP-->
+        <h1>TEXT EXPLORER</h1>
+    </header>
+
+    <main>
+        <div id="toolbar">
+            <span>
+                <input id="searchField" type="text" placeholder="Search an expression">
+                <button id="searchButton">Search</button>
+            </span>
+        </div>
+
+        <div id="editor" contenteditable="true"></div>
+
+        <div id="contextbar">
+            <span>
+                <span><span id="wordsCounter">0</span> words</span>
+                <span><span id="sentencesCounter">0</span> sentences</span>
+            </span>
+        </div>
+    </main>
+
+    <footer>
+        <span>© 2020 – Ethan Cybulski - Florian Vaneste - Thomas Cottrez</span>
+    </footer>
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

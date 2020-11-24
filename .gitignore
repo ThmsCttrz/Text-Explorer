@@ -6,6 +6,9 @@ Thumbs.db:encryptable
 ehthumbs.db
 ehthumbs_vista.db
 
+.idea
+.gitignore
+
 # Dump file
 *.stackdump
 
@@ -24,6 +27,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-.idea
-.gitignore

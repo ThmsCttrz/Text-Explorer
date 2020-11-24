@@ -6,8 +6,8 @@ Thumbs.db:encryptable
 ehthumbs.db
 ehthumbs_vista.db
 
-idea
-gitignore
+.idea
+.gitignore
 
 # Dump file
 *.stackdump

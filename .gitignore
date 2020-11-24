@@ -25,4 +25,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-.idea
+*.idea
+*.gitignore

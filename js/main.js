@@ -96,4 +96,6 @@ searchField.addEventListener("input", function () {
     searchOccurrences(searchField.value);
 });
 
+
+// On click on the search erase button, errase the search
 eraseSearchFieldButton.addEventListener("click", eraseSearch)

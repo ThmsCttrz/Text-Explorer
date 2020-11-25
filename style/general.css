@@ -18,6 +18,15 @@
 }
 
 
+
+/*GENERAL CLASSES*/
+
+.hidden {
+    display: none;
+}
+
+
+
 /*PAGE STRUCTURE*/
 
 html {

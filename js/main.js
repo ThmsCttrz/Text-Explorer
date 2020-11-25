@@ -1,7 +1,8 @@
 var editor = document.getElementById("editor"),
     searchField = document.getElementById("searchField"),
-    occurrencesCounter = document.getElementById("occurrencesCounter"),
+    searchButton = document.getElementById("searchButton");
     eraseSearchFieldButton = document.getElementById("eraseSearchFieldButton"),
+    occurrencesCounter = document.getElementById("occurrencesCounter"),
     wordsCounter = document.getElementById("wordsCounter"),
     sentencesCounter = document.getElementById("sentencesCounter");
 
@@ -60,7 +61,7 @@ function searchOccurrences(needle) {
 
     if (needle.length > 0) {
         eraseSearchFieldButton.classList.remove("hidden");
-        occurrencesCounter.innerText = countOccurences + " occurrences found";
+        occurrencesCounter.innerText = countOccurences + " occurrence" + (countOccurences != 1 ? "s" : "") + " found";
     }
     else {
         occurrencesCounter.innerText = "";
@@ -73,6 +74,7 @@ function eraseSearch() {
     searchField.value = "";
     occurrencesCounter.innerText = "";
     eraseSearchFieldButton.classList.add("hidden");
+    searchOccurrences(searchField.value);
 }
 
 // On input in the textarea, refresh the stats
@@ -83,11 +85,15 @@ editor.addEventListener("input", function() {
 })
 
 
-// On click on the "search" button, display the results
+// On click on the "search" button, launch a search
+searchButton.addEventListener("click", function () {
+    searchOccurrences(searchField.value);
+})
+
+
+// On input in the search field, launch a search
 searchField.addEventListener("input", function () {
-    console.log(searchField.value)
     searchOccurrences(searchField.value);
 });
-
 
 eraseSearchFieldButton.addEventListener("click", eraseSearch)

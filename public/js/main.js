@@ -43,6 +43,7 @@ function searchOccurrences(needle) {
     let haystackLength = haystack.length;
     let temp = 0;
 
+    // Function to insert data in htmlResult
     const insert = (reset_temp, insert_needle_slice, insert_current_character, currentCharacter = "") => {
         // If specified, insert the needle part that has not yet been added
         if (insert_needle_slice)

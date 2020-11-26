@@ -25,6 +25,9 @@
     display: none;
 }
 
+.highlighting_disabled mark {
+    background-color: transparent;
+}
 
 
 /*PAGE STRUCTURE*/

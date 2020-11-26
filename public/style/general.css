@@ -16,7 +16,10 @@
     font-family: "Metropolis Light";
     src: url("../media/fonts/Metropolis-Light.woff");
 }
-
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("../media/fonts/JetBrainsMono-Regular.woff");
+}
 
 
 /*GENERAL CLASSES*/
@@ -109,4 +112,8 @@ footer {
 
 #contextbar > span {
     margin: 0 7px;
+}
+
+#editor {
+    font-family: "JetBrains Mono";
 }

@@ -8,16 +8,15 @@ const editor = document.getElementById("editor"),
 
 let is_search_active = false;
 
+
 function countWords(text) {
     // TO DO
-    //console.log("X words in the text");
     return 0;
 }
 
 
 function countSentences(text) {
     // TO DO
-    //console.log("X sentences in the text");
     return 0;
 }
 
@@ -146,10 +145,10 @@ editor.addEventListener("input", function() {
         eraseSearch(false);
 })
 
-// On click on the "search" button, launch a search
-searchButton.addEventListener("click", function () {
+// On input in the search field, launch a search
+searchField.addEventListener("input", function () {
     searchOccurrences(searchField.value);
-})
+});
 
 // On press enter in the search field, launch a search
 searchField.addEventListener('keyup', function(event) {
@@ -158,10 +157,12 @@ searchField.addEventListener('keyup', function(event) {
     }
 })
 
-// On input in the search field, launch a search
-searchField.addEventListener("input", function () {
+// On click on the "search" button, launch a search
+searchButton.addEventListener("click", function () {
     searchOccurrences(searchField.value);
-});
+})
 
 // On click on the search erase button, erase the search
-clearSearchFieldButton.addEventListener("click", eraseSearch)
+clearSearchFieldButton.addEventListener("click", function () {
+    eraseSearch(true);
+})

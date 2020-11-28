@@ -13,12 +13,12 @@
 
     <main>
         <div id="toolbar">
-            <span>
+            <div id="inputSection">
                 <input id="searchField" type="text" placeholder="Search an expression">
-                <button id="searchButton">Search</button>
-                <button id="clearSearchFieldButton" class="hidden">X</button>
-            </span>
-            <span id="occurrencesCounter"></span>
+                <button id="searchButton"><img class="logo" src="media/icon/loupe.svg"/></button>
+                <button id="clearSearchFieldButton"><img class="logo" src="media/icon/close.svg"/></button>
+            </div>
+            <div id="occurrencesCounter"></div>
         </div>
 
         <div id="editor" spellcheck="false" contenteditable="true"></div>

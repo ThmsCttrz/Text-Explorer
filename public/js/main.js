@@ -100,11 +100,11 @@ function searchOccurrences(needle) {
 
     // Display of the occurrences counter and of the clear field erasing button
     if (needle.length > 0) {
-        clearSearchFieldButton.classList.remove("hidden");
+        // clearSearchFieldButton.classList.remove("hidden");
         occurrencesCounter.innerText = countOccurences + " occurrence" + (countOccurences !== 1 ? "s" : "") + " found";
     }
     else {
-        clearSearchFieldButton.classList.add("hidden");
+        // clearSearchFieldButton.classList.add("hidden");
         occurrencesCounter.innerText = "";
     }
 
@@ -118,7 +118,7 @@ function eraseSearch(clearSearchField = true) {
 
     // Truncate the occurrences counter and hide the search erasing button
     occurrencesCounter.innerText = "";
-    clearSearchFieldButton.classList.add("hidden");
+    // clearSearchFieldButton.classList.add("hidden");
 
     // Disable the search results highlighting
     editor.classList.add('highlighting_disabled')

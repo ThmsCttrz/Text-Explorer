@@ -24,10 +24,6 @@
 
 /*GENERAL CLASSES*/
 
-.hidden {
-    display: none;
-}
-
 .highlighting_disabled mark {
     background-color: transparent;
     color: inherit;
@@ -124,7 +120,8 @@ footer {
 }
 
 #searchField {
-    width: 90%;
+    width: calc(85% - 10px);
+    padding-left: 10px;
     margin: 0;
     background-color: #393e46;
     border: none;
@@ -139,7 +136,6 @@ footer {
 #searchButton, #clearSearchFieldButton {
     display: flex;
     -webkit-appearance: none;
-    width: 10%;
     border: none;
     border-radius: 0;
     justify-content: center;
@@ -147,9 +143,11 @@ footer {
     transition: 200ms ease-in-out;
 }
 #searchButton {
+    width: 10%;
     background-color: #636D7F;
 }
 #clearSearchFieldButton {
+    width: 5%;
     background-color: #7D8FAE;
 }
 #searchButton:hover, #clearSearchFieldButton:hover {
@@ -164,7 +162,7 @@ footer {
     width: 25%;
 }
 #clearSearchFieldButton .logo {
-    width: 18%;
+    width: 40%;
 }
 
 mark {
@@ -172,10 +170,10 @@ mark {
 }
 
 #editor {
-    min-width: calc(70vw - 14px);
-    max-width: calc(70vw - 14px);
-    width: calc(70vw - 14px);
-    padding: 15px 7px;
+    min-width: calc(70vw - 20px);
+    max-width: calc(70vw - 20px);
+    width: calc(70vw - 20px);
+    padding: 15px 10px;
     min-height: calc(70vh - 40px - 30px - 30px);
     max-height: calc(70vh - 40px - 30px - 30px);
     height: calc(70vh - 40px - 30px);
@@ -184,6 +182,28 @@ mark {
     outline: none;
     border: none;
     overflow-y: auto;
+}
+
+/* width */
+#editor::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+}
+/* Track */
+#editor::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: #494F59;
+    opacity: 0.5;
+}
+/* Handle */
+#editor::-webkit-scrollbar-thumb {
+    background: #7D8FAE;
+    border-radius: 5px;
+}
+/* Handle on hover */
+#editor::-webkit-scrollbar-thumb:hover {
+    cursor: default;
+    background: #888;
 }
 
 #contextbar {

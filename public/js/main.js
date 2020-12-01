@@ -10,14 +10,12 @@ let is_search_active = false;
 
 
 function countWords(text) {
-    // TO DO
-    return 0;
+    return text.split(/\s+/g).filter(w => w !== '').length;
 }
 
 
 function countSentences(text) {
-    // TO DO
-    return 0;
+    return text.split(/[.!?]+\s+/).filter(Boolean).length;
 }
 
 

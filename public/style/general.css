@@ -24,10 +24,15 @@
 
 /*GENERAL CLASSES*/
 
+.hidden {
+    display: none !important;
+}
+
 .highlighting_disabled mark {
     background-color: transparent;
     color: inherit;
 }
+
 
 /* MAIN TITLE */
 h1 {
@@ -92,6 +97,17 @@ footer {
 }
 
 /*PAGE ELEMENTS*/
+
+button {
+    background: none;
+    padding: 1px 6px;
+    border: none;
+    cursor: pointer;
+}
+
+mark {
+    background-color: rgba(0, 173, 181, 0.8);
+}
 
 #toolbar {
     display: flex;
@@ -158,15 +174,11 @@ footer {
     outline: none;
     border: 1px solid #eee;
 }
-#searchButton .logo {
+#searchButton img {
     width: 25%;
 }
-#clearSearchFieldButton .logo {
+#clearSearchFieldButton img {
     width: 40%;
-}
-
-mark {
-    background-color: rgba(0, 173, 181, 0.8);
 }
 
 #editor {
@@ -221,5 +233,78 @@ mark {
 }
 
 #editor {
-    font-family: "JetBrains Mono";
+    font-family: "JetBrains Mono", monospace;
+}
+
+
+/*Ajouts Florian*/
+
+#statisticsButton > img {
+    height: 20px;
+}
+
+/* Overlay */
+#overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+    background-color: rgba(15, 15, 15, 0.6);
+}
+#overlay #overlay_hideArea {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+
+/* Windows */
+.window {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 40vw;
+    background-color: #282B30;
+    border: 1px solid gray;
+    color: white;
+    z-index: 200;
+}
+.window .window_titleBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7D8FAE;
+    padding: 5px 5px 2px 5px;
+    width: calc(100% - 10px); /* = largeur de la fenêtre - padding */
+    font-size: 14pt;
+    font-family: "Metropolis Semi Bold", sans-serif;
+}
+.window .window_closeButton {
+    background: none;
+}
+.window .window_closeButton > img {
+    height: 20px;
+}
+.window .window_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px 20px;
+    min-height: 60px;
+    max-height: 70vh;
+}
+.window .window_content span {
+    margin: 5px 3px;
+}
+.window .window_content ol {
+    padding-left: 30px;
+}
+.window .window_content li {
+    margin: 5px 0;
 }

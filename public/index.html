@@ -11,23 +11,60 @@
         <h1>TEXT EXPLORER</h1>
     </header>
 
+
+    <div id="overlay" class="hidden">
+
+        <div id="overlay_hideArea"></div>
+
+        <div class="window" id="statisticsWindow">
+            <div class="window_titleBar">
+                <span>Statistics</span>
+                <button class="window_closeButton" aria-label="Close the window">
+                    <img src="media/icon/close.svg" alt="Close">
+                </button>
+            </div>
+
+            <div class="window_content">
+                <span id="statistics_vowels">Vowels : <span class="result"></span></span>
+                <span id="statistics_longestWord">Longest word : <span class="result"></span></span>
+                <span id="statistics_recurringWords">Recurring words : <br>
+                    <ol class="listResult"></ol>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
     <main>
         <div id="toolbar">
             <div id="inputSection">
-                <input id="searchField" type="text" placeholder="Search an expression">
-                <button id="searchButton"><img class="logo" src="media/icon/loupe.svg"/></button>
-                <button id="clearSearchFieldButton"><img class="logo" src="media/icon/close.svg"/></button>
+                <input id="searchField" type="text" placeholder="Search an expression" aria-label="Enter an expression to search in the text">
+
+                <button id="searchButton" aria-label="Search">
+                    <img src="media/icon/search.svg" alt="Search"/>
+                </button>
+
+                <button id="clearSearchFieldButton" aria-label="Erase the search">
+                    <img src="media/icon/erase.svg" alt="Erase"/>
+                </button>
             </div>
+
             <div id="occurrencesCounter"></div>
         </div>
 
-        <div id="editor" spellcheck="false" contenteditable="true"></div>
+
+        <div id="editor" spellcheck="false" contenteditable="true" autofocus></div>
+
 
         <div id="contextbar">
             <span>
-                <span><span id="wordsCounter">0</span> words</span>
-                <span><span id="sentencesCounter">0</span> sentences</span>
+                <span id="wordsCounter">0 words</span>
+                <span id="sentencesCounter">0 sentences</span>
             </span>
+
+            <button id="statisticsButton" aria-label="Display more statistics">
+                <img src="media/icon/statistics.svg" alt="Stastistics">
+            </button>
         </div>
     </main>
 
@@ -36,6 +73,8 @@
     </footer>
 </body>
 
-<script src="js/main.js"></script>
+<script type="module" src="js/TextAnalyzer.mjs"></script>
+<script type="module" src="js/Overlay.mjs"></script>
+<script type="module" src="js/Main.mjs"></script>
 
 </html>

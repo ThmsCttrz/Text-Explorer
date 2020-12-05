@@ -30,8 +30,15 @@ class TextAnalyzer {
 
     static countVowels(text) {
         // Returns the number of vowels in the text
-        // TODO
-        return "toto";
+        let vowels = ['a','e','i','o','u','y'];
+        let count = 0;
+        for(let i = 0; i < text.length; i++) {
+            for(let j = 0; j < vowels.length; j++) {
+                if (text[i].toLowerCase() === vowels[j])
+                    count += 1;
+            }
+        }
+        return count;
     }
 
 
@@ -43,7 +50,7 @@ class TextAnalyzer {
             if (words[i].length > longestWord.length)
                 longestWord = words[i];
         }
-        return longestWord;
+        return longestWord+" ("+longestWord.length+")";
     }
 
 

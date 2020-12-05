@@ -61,7 +61,7 @@ class APP {
 
         // On input in the editor, refresh the stats and erase the search
         ENV.editor.addEventListener("input", function() {
-            let text = ENV.editor.innerHTML;
+            let text = ENV.editor.innerText;
             ENV.wordsCounter.innerHTML = TextAnalyzer.countWords(text);
             ENV.sentencesCounter.innerHTML = TextAnalyzer.countSentences(text);
             if (!APP.is_search_active)
@@ -96,7 +96,7 @@ class APP {
 
         /*--Statistics window events--*/
         ENV.statisticsWindow.showButton.addEventListener("click", function () {
-            APP.refreshStatistics(escape(ENV.editor.innerHTML));
+            APP.refreshStatistics(ENV.editor.innerText);
             ENV.statisticsWindow.show()
         });
         ENV.statisticsWindow.closeButton.addEventListener("click", function () {

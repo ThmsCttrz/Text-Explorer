@@ -16,14 +16,14 @@ class TextAnalyzer {
 
     static countWords(text) {
         // Returns the number of words in the text
-        let result = text.split(/\s+/g).filter(w => w !== '').length
+        let result = text.split(/\s+/).filter(w => w !== '').length;
         return result + " word" + APP.plural(result);
     }
 
 
     static countSentences(text) {
         // Returns the numbre of sequences in the text
-        let result = text.split(/[.!?]+\s+/).filter(Boolean).length
+        let result = text.split(/[.!?]+\s+/).filter(Boolean).length;
         return result + " sentence" + APP.plural(result);
     }
 
@@ -37,8 +37,13 @@ class TextAnalyzer {
 
     static longestWord(text) {
         // Returns the longest word of the text
-        // TODO
-        return "foo"
+        let words = text.split(/\s+/).filter(w => w !== '');
+        let longestWord = "";
+        for(let i = 0; i < words.length; i++) {
+            if (words[i].length > longestWord.length)
+                longestWord = words[i];
+        }
+        return longestWord;
     }
 
 

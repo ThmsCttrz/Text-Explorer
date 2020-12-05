@@ -136,7 +136,7 @@ mark {
 }
 
 #searchField {
-    width: calc(85% - 10px);
+    width: calc(75% - 10px);
     padding-left: 10px;
     margin: 0;
     background-color: #393e46;
@@ -160,10 +160,11 @@ mark {
 }
 #searchButton {
     width: 10%;
+    margin-right: 5%;
     background-color: #636D7F;
 }
 #clearSearchFieldButton {
-    width: 5%;
+    width: 10%;
     background-color: #7D8FAE;
 }
 #searchButton:hover, #clearSearchFieldButton:hover {
@@ -175,10 +176,10 @@ mark {
     border: 1px solid #eee;
 }
 #searchButton img {
-    width: 25%;
+    width: 20px;
 }
 #clearSearchFieldButton img {
-    width: 40%;
+    width: 15px;
 }
 
 #editor {
@@ -239,8 +240,22 @@ mark {
 
 /*Ajouts Florian*/
 
-#statisticsButton > img {
-    height: 20px;
+#statisticsButton {
+    -webkit-appearance: none;
+    height: 100%;
+    width: 250px;
+    margin: 0 15px;
+    background-color: rgb(115, 126, 145);
+    font-family: "Metropolis Regular", sans-serif;
+    transition: 200ms ease-in-out;
+    font-size: 1rem;
+}
+#statisticsButton:hover {
+    background-color: #00adb5;
+}
+#statisticsButton:focus {
+    outline: none;
+    border: 1px solid white;
 }
 
 /* Overlay */
@@ -269,7 +284,7 @@ mark {
     align-items: flex-start;
     width: 40vw;
     background-color: #282B30;
-    border: 1px solid gray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
     color: white;
     z-index: 200;
 }
@@ -278,17 +293,29 @@ mark {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #7D8FAE;
-    padding: 5px 5px 2px 5px;
+    background-color: #393e46;
+    padding: 0 0 0 10px;
+    height: 40px;
     width: calc(100% - 10px); /* = largeur de la fenêtre - padding */
     font-size: 14pt;
-    font-family: "Metropolis Semi Bold", sans-serif;
+    font-family: "Metropolis Regular", sans-serif;
 }
 .window .window_closeButton {
-    background: none;
+    background-color: #636D7F;
+    height: 100%;
+    width: 15%;
+    transition: 200ms ease-in-out;
+}
+.window .window_closeButton:hover {
+    background-color: #00adb5;
+}
+.window .window_closeButton:focus {
+    outline: none;
+    border: 1px solid white;
 }
 .window .window_closeButton > img {
-    height: 20px;
+    margin-top: 3px;
+    height: 18px;
 }
 .window .window_content {
     display: flex;

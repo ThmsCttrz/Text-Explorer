@@ -50,6 +50,8 @@ class TextAnalyzer {
             if (words[i].length > longestWord.length)
                 longestWord = words[i];
         }
+        if (longestWord==="")
+            return 'None';
         return longestWord+" ("+longestWord.length+")";
     }
 

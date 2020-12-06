@@ -58,12 +58,26 @@ class TextAnalyzer {
 
     static recurringWords(text) {
         // Returns the 10 more recurring words (or less if the text contains less than 10 words)
-        // TODO (nb: what is following is just an example you can use (or not) to complete the function)
-        let result = ""
+        let result = "";
+        let longestWord = "";
+        let words = text.split(/\s+/).filter(w => w !== '');
 
-        for (let i = 0; i < 10; i++)
-            result += "<li>" + 'Result ' + (i + 1) + '</li>';
+        let iteration;
+        if (words.length < 10)
+            iteration = words.length;
+        else
+            iteration = 10;
 
+        for (let i = 0; i < iteration; i++) {
+            longestWord = "";
+            for(let j = 0; j < words.length; j++) {
+                if (words[j].length > longestWord.length)
+                    longestWord = words[j];
+            }
+            text = text.replaceAll(longestWord, "");
+            words = text.split(/\s+/).filter(w => w !== '');
+            result += "<li>" + longestWord + " (" + longestWord.length + ")" + "</li>\n";
+        }
         return result
     }
 

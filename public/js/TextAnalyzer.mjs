@@ -59,7 +59,6 @@ class TextAnalyzer {
     static recurringWords(text) {
         // Returns the 10 more recurring words (or less if the text contains less than 10 words)
         let result = "";
-        let longestWord = "";
         let words = text.split(/\s+/).filter(w => w !== '');
         let max = [];
         let word = "";

@@ -61,6 +61,8 @@ class TextAnalyzer {
         let result = "";
         let longestWord = "";
         let words = text.split(/\s+/).filter(w => w !== '');
+        let max = [];
+        let word = "";
 
         let iteration;
         if (words.length < 10)
@@ -69,14 +71,25 @@ class TextAnalyzer {
             iteration = 10;
 
         for (let i = 0; i < iteration; i++) {
-            longestWord = "";
-            for(let j = 0; j < words.length; j++) {
-                if (words[j].length > longestWord.length)
-                    longestWord = words[j];
+            let maxOc = 0;
+            for (let j=0; j<words.length; j++) {
+                if (!max.includes(words[j])) {
+                    let nbOc = 0;
+                    for (let k=0; k<words.length; k++) {
+                        if (words[j] === words[k]) {
+                            nbOc += 1;
+                        }
+                    }
+                    if (nbOc > maxOc) {
+                        maxOc = nbOc;
+                        word = words[j];
+                    }
+                }
             }
-            text = text.replaceAll(longestWord, "");
-            words = text.split(/\s+/).filter(w => w !== '');
-            result += "<li>" + longestWord + " (" + longestWord.length + ")" + "</li>\n";
+            if (!max.includes(word)) {
+                max[i] = word;
+                result += "<li>" + word + "</li>\n";
+            }
         }
         return result
     }

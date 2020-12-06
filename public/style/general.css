@@ -144,6 +144,7 @@ mark {
     outline: none;
     color: #C5CDD9;
     font-size: 1em;
+    font-family: "JetBrains Mono", monospace;
 }
 #searchField::placeholder {
     color: #C5CDD9;
@@ -232,7 +233,11 @@ mark {
 }
 
 #contextbar > span {
-    margin: 0 7px;
+    margin: 0 5px;
+}
+#contextbar > span span {
+    display: inline-block;
+    margin: 0 5px;
 }
 
 #editor {
@@ -245,7 +250,7 @@ mark {
 #statisticsButton {
     -webkit-appearance: none;
     height: 100%;
-    width: 250px;
+    width: 200px;
     margin: 0 15px;
     background-color: rgb(115, 126, 145);
     font-family: "Metropolis Regular", sans-serif;
@@ -327,13 +332,40 @@ mark {
     padding: 15px 20px;
     min-height: 60px;
     max-height: 70vh;
+    width: calc(100% - 40px);
 }
 .window .window_content span {
     margin: 5px 3px;
 }
 .window .window_content ol {
-    padding-left: 30px;
+    padding: 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: normal;
+    width: 65%;
+    margin: auto;
 }
-.window .window_content li {
-    margin: 5px 0;
+
+#statistics_vowels {
+    font-weight: bold;
+    display: block;
+    padding: 5px;
+}
+#statistics_longestWord {
+    font-weight: bold;
+    display: block;
+    padding: 5px;
+}
+#statistics_recurringWords {
+    width: 70%;
+    margin: 10px 15% 0 15%;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    background-color: #282B30;
+    border-top: 1px solid #eee;
+}
+
+.window .window_content .result {
+    font-weight: normal;
+    font-family: "JetBrains Mono", monospace;
 }
